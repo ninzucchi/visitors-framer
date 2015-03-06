@@ -98,26 +98,26 @@ In Framer, every object is considered a layer. At their simplest, Layers are sim
 
 For our purposes, Layers are groups from Sketch. However, Framer can just as easily create layers from scratch. For example, the following code prompts Framer to creates new rectangle layer:
 
-``layerA = new Layer
-    x:0, y:0, width:100, height:100``
+	layerA = new Layer
+	    x:0, y:0, width:100, height:100
 
 ## Layer Properties
 
 All layers have certain default properties, namely width, height, position and background color. A full list of additional properties can be found in the [Framer Documentation](http://framerjs.com/docs/). Properties can be defined when a Layer is created, as above, or after the fact, so below: 
 
-``sketch.logoIcon.rotation = 45``
+	sketch.logoIcon.rotation = 45
 
 Layers are easy to position, too. Each layer has the following properties to help define its position: 
 
-``print sketch.logoIcon.x
-print sketch.logoIcon.minX
-print sketch.logoIcon.maxX
-print sketch.logoIcon.midX
-
-print sketch.logoIcon.y
-print sketch.logoIcon.minY
-print sketch.logoIcon.maxY
-print sketch.logoIcon.midY``
+	print sketch.logoIcon.x
+	print sketch.logoIcon.minX
+	print sketch.logoIcon.maxX
+	print sketch.logoIcon.midX
+	
+	print sketch.logoIcon.y
+	print sketch.logoIcon.minY
+	print sketch.logoIcon.maxY
+	print sketch.logoIcon.midY
 
 # Animations
 Layer properties can be animated to change over time. Framer lets the user specify an animation’s length, delay, and number of repetitions. Try out the following to put our logo on spinners:
