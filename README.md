@@ -122,12 +122,12 @@ print sketch.logoIcon.midY``
 # Animations
 Layer properties can be animated to change over time. Framer lets the user specify an animation’s length, delay, and number of repetitions. Try out the following to put our logo on spinners:
 
-``logo.animate
-    properties:
-        rotation: 360
-    curve: “linear”
-    repeat: 99
-    time: 2``
+	logo.animate
+	    properties:
+	        rotation: 360
+	    curve: “linear”
+	    repeat: 99
+	    time: 2
 
 Animations also let users select an appropriate curve, for example linear, eased, bezier, or spring. Try changing the like `curve: “linear”` to `curve: “ease-in-out”` above.
 
