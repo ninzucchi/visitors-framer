@@ -129,7 +129,7 @@ Layer properties can be animated to change over time. Framer lets the user speci
 	    repeat: 99
 	    time: 2
 
-![Logo Spinning](img/logo—rotate.png)
+![Logo Spinning](img/logo—rotate.gif)
 
 Animations also let users select an appropriate curve, for example linear, eased, bezier, or spring. Try changing the like `curve: “linear”` to `curve: “ease-in-out”` above.
 
@@ -156,7 +156,7 @@ In order to transition between states, we need to listen for certain events. Fra
 	logo.on Events.Click, ->
 		logo.states.next()
 
-![Click Interaction](img/logo—click.png)
+![Click Interaction](img/logo—click.gif)
 
 Now our Logo will switch between its two states when clicked. To get deeper, re-comment those two lines and instead use the lines just below: 
 
@@ -166,13 +166,13 @@ Now our Logo will switch between its two states when clicked. To get deeper, re-
 	logo.on Events.TouchEnd, ->
 		logo.states.switch(“default”)
 
-![Press Interaction](img/logo—press.png)
+![Press Interaction](img/logo—press.gif)
 
 By using the TouchStart and TouchEnd events, you’ll have a much more realistic interaction overall. 
 
 # Tying it Together
 
-![Layers List](img/layer-list.png)
+![Layers List](img/scrolling.gif)
 
 Even though we’ve only built a squishy logo, we’ve touched on many of the key concepts Framer has to offer. The following lines (from here to the bottom of the editor) implements a simple carousel to transition between four walkthrough screens. I won’t walk through every line here, but in reading them you’ll learn how to create arrays, assign parents, and create draggable elements. Some simple javascript logic ties things together, checking for the carousel’s release and snapping to the proper position in response. 
 
