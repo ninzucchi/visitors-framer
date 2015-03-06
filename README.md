@@ -129,20 +129,56 @@ Layer properties can be animated to change over time. Framer lets the user speci
 	    repeat: 99
 	    time: 2
 
+![Logo Spinning](img/logo—rotate.png)
+
 Animations also let users select an appropriate curve, for example linear, eased, bezier, or spring. Try changing the like `curve: “linear”` to `curve: “ease-in-out”` above.
 
 # States
 
-Animations are cool, but real power comes when using them in tandem with States.
+Animations are cool, but real power comes when using them in tandem with States. States are great because they mirror how we interaction designers think about our applications. They also allow behaviors to be much more reusable. A state is simply a set of properties, attached to a Layer. When you tell that layer to go to a given state, it transitions to that set of properties.
+
+Spinning logos are so 80’s. Let’s use states to turn our logo into a simple squishy button. Uncomment the following chunk:
+
+	logo.states.add
+		pressed: {scale:0.9, rotationZ:45}
+	
+	logo.states.animationOptions =
+		curve: “spring(500,15,0)”
+
+The first lines add a new state to the Logo layer. Each layer has an implicit starting state called “default” (you can always remove it with `layer.states.remove(“default”)`. 
+
+The second lines program our layer with a default transition animation. Every time we switch states, Layer properties will tween to their new values using this curve.
 
 # Events
-States
-Live Data
-Previewing
-Running & Exporting
 
+In order to transition between states, we need to listen for certain events. Framer provides a library of Events for each layer. Most are about user interaction, but some are triggered by moments in the execution of your code. Uncomment the following lines to begin playing:
 
+	logo.on Events.Click, ->
+		logo.states.next()
 
-# Artboards
+![Click Interaction](img/logo—click.png)
 
-# Shapes
+Now our Logo will switch between its two states when clicked. To get deeper, re-comment those two lines and instead use the lines just below: 
+
+	logo.on Events.TouchStart, ->
+		logo.states.switch(“pressed”)
+	    
+	logo.on Events.TouchEnd, ->
+		logo.states.switch(“default”)
+
+![Press Interaction](img/logo—press.png)
+
+By using the TouchStart and TouchEnd events, you’ll have a much more realistic interaction overall. 
+
+# Tying it Together
+
+![Layers List](img/layer-list.png)
+
+Even though we’ve only built a squishy logo, we’ve touched on many of the key concepts Framer has to offer. The following lines (from here to the bottom of the editor) implements a simple carousel to transition between four walkthrough screens. I won’t walk through every line here, but in reading them you’ll learn how to create arrays, assign parents, and create draggable elements. Some simple javascript logic ties things together, checking for the carousel’s release and snapping to the proper position in response. 
+
+# Getting it Out
+
+What good
+
+## Device Mirroring
+## Web Exporting
