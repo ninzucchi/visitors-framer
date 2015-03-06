@@ -1,12 +1,9 @@
-# This imports all the layers for "framer-tutorial-beta" into framerTutorialBetaLayers3
-sketch = Framer.Importer.load "imported/framer-tutorial-beta"
-
 # We store some variables to use later on.
 screenWidth = Framer.Device.screen.width
 screenHeight = Framer.Device.screen.height
 startPosition = 0
 
-logo = sketch.logoIcon
+# logo = sketch.logoIcon
 
 # ----------------------------------------------------
 # Animation Demo
@@ -26,11 +23,11 @@ logo = sketch.logoIcon
 # * Note that there is an implicit first state called 'default' * 
 # ----------------------------------------------------
 #
-logo.states.add
-	pressed: {scale:0.9, rotationZ:45}
-
-logo.states.animationOptions =
-	curve: "spring(500,15,0)"
+# logo.states.add
+# 	pressed: {scale:0.9, rotationZ:45}
+# 
+# logo.states.animationOptions =
+# 	curve: "spring(500,15,0)"
 
 
 # ----------------------------------------------------
@@ -47,11 +44,11 @@ logo.states.animationOptions =
 # * Transition between states on touch events *
 # ----------------------------------------------------
 #
-logo.on Events.TouchStart, ->
-	logo.states.switch("pressed")
-    
-logo.on Events.TouchEnd, ->
-	logo.states.switch("default")
+# logo.on Events.TouchStart, ->
+# 	logo.states.switch("pressed")
+#     
+# logo.on Events.TouchEnd, ->
+# 	logo.states.switch("default")
 
 
 
@@ -69,10 +66,10 @@ logo.on Events.TouchEnd, ->
 # * Create a new container layer with width equal to that of our 4 artboards *
 # ----------------------------------------------------
 #
-screenContainer = new Layer 
-	width: screenWidth * 4
-	height: screenHeight
-	backgroundColor: "transparent"
+# screenContainer = new Layer 
+# 	width: screenWidth * 4
+# 	height: screenHeight
+# 	backgroundColor: "transparent"
 
 
 # ----------------------------------------------------
@@ -80,8 +77,8 @@ screenContainer = new Layer
 # * Enable draggability on the x-dimension only *
 # ----------------------------------------------------
 #
-screenContainer.draggable.enabled = true
-screenContainer.draggable.speedY = 0
+# screenContainer.draggable.enabled = true
+# screenContainer.draggable.speedY = 0
 
 
 # ----------------------------------------------------
@@ -89,9 +86,9 @@ screenContainer.draggable.speedY = 0
 # * Only the first artboard is visible by default. Here we'll manually show the others *
 # ----------------------------------------------------
 # 
-sketch.artboardB.visible = true
-sketch.artboardC.visible = true
-sketch.artboardD.visible = true
+# sketch.artboardB.visible = true
+# sketch.artboardC.visible = true
+# sketch.artboardD.visible = true
 
 
 # ----------------------------------------------------
@@ -99,10 +96,10 @@ sketch.artboardD.visible = true
 # * Artboards automatically import at (0,0). here we'll push them offscreen *
 # ----------------------------------------------------
 #
-sketch.contentA.x = 0
-sketch.artboardB.x = screenWidth
-sketch.artboardC.x = screenWidth * 2
-sketch.artboardD.x = screenWidth * 3
+# sketch.contentA.x = 0
+# sketch.artboardB.x = screenWidth
+# sketch.artboardC.x = screenWidth * 2
+# sketch.artboardD.x = screenWidth * 3
 
 
 # ----------------------------------------------------
