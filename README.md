@@ -109,8 +109,7 @@ All layers have certain default properties, namely width, height, position and b
 
 Layers are easy to position, too. Each layer has the following properties to help define its position: 
 
-``
-#Prints the layer’s left edge
+``#Prints the layer’s left edge
 print sketch.logoIcon.x
 print sketch.logoIcon.minX
 
@@ -128,8 +127,7 @@ print sketch.logoIcon.minY
 print sketch.logoIcon.maxY
 
 #Prints the layer’s vertical center
-print sketch.logoIcon.midY
-``
+print sketch.logoIcon.midY``
 
 # Animations
 Layer properties can be animated to change over time. Framer lets the user specify an animation’s length, delay, and number of repetitions. Try out the following to put our logo on spinners:
