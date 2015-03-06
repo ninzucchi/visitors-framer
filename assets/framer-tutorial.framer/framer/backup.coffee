@@ -3,10 +3,7 @@ screenWidth = Framer.Device.screen.width
 screenHeight = Framer.Device.screen.height
 startPosition = 0
 
-# This imports all the layers for "framer-tutorial-beta" into framerTutorialBetaLayers1
-sketch = Framer.Importer.load "imported/framer-tutorial-beta"
-
-logo = sketch.logoIcon
+# logo = sketch.logoIcon
 
 # ----------------------------------------------------
 # Animation Demo
