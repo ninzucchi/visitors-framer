@@ -1,89 +1,159 @@
-# This imports all the layers for "framer-tutorial-beta" into framerTutorialBetaLayers1
-sketch = Framer.Importer.load "imported/framer-tutorial-beta"
-
-# Artboard Setup
-# Only the first artboard is visible by default, so we have to manually show the others
-sketch.artboardB.visible = true
-#sketch.artboardC.visible = true
-
-# Artboards automatically import at (0,0), but we want them offscreen
-# This code pushes each artboard off screen to the right.
-sketch.artboardB.x = sketch.artboardA.maxX
-sketch.artboardC.x = sketch.artboardB.maxX
-
-logo = sketch.logoIcon
-
-logo.animate
-    properties:
-        rotation: 360
-    curve: linear
-    repeat: 99
-    time: 1
-
-# Define a set of states with names (the original state is 'default')
-logo.states.add
-	second: {y:100, scale:0.6, rotationZ:100}
-	third:  {y:300, scale:1.3, blur:4}
-	fourth: {y:200, scale:0.9, blur:2, rotationZ:200}
-
-# Set the default animation options
-logo.states.animationOptions =
-	curve: "spring(500,12,0)"
-
-# On a click, go to the next state
-logo.on Events.Click, ->
-	logo.states.next()
-
-#
-#
-#
-#
-#
-#
 # We store some variables to use later on.
 screenWidth = Framer.Device.screen.width
 screenHeight = Framer.Device.screen.height
 startPosition = 0
 
-# We set up a container holding all of our artboards.
-# Its width is set to 3x the screenWidth, because we have 3 screens to swipe between.
-screenContainer = new Layer width:(screenWidth*3), height:screenHeight, backgroundColor: "transparent"
+# This imports all the layers for "framer-tutorial-beta" into framerTutorialBetaLayers1
+sketch = Framer.Importer.load "imported/framer-tutorial-beta"
 
-# Make it only horizontally draggable
-screenContainer.draggable.enabled = true
-screenContainer.draggable.speedY = 0
+logo = sketch.logoIcon
 
-# Adding states for each screen and its position
-screenContainer.states.add 
-	screen1: {x:0}
-	screen2: {x:-screenWidth}
-	screen3: {x:-screenWidth*2}
+# ----------------------------------------------------
+# Animation Demo
+# This animation will play continuously
+# ----------------------------------------------------
+#
+# logo.animate
+#     properties:
+#         rotation: 360
+#     curve: "linear"
+#     repeat: 99
+#     time: 1
+
+
+# ----------------------------------------------------
+# States Demo
+# * Note that there is an implicit first state called 'default' * 
+# ----------------------------------------------------
+#
+# logo.states.add
+# 	pressed: {scale:0.9, rotationZ:45}
+# 
+# logo.states.animationOptions =
+# 	curve: "spring(500,15,0)"
+# 	
+# logo.on Events.Click, ->
+# 	logo.states.next()
+
+
+# ----------------------------------------------------
+# Events Demo
+# * Transition between states on touch events *
+# ----------------------------------------------------
+#
+# logo.on Events.TouchStart, ->
+# 	logo.states.switch("pressed")
+#     
+# logo.on Events.TouchEnd, ->
+# 	logo.states.switch("default")
+
+
+
+
+
+
+
+
+
+
+
+
+# ----------------------------------------------------
+# New Layer Demo
+# * Create a new container layer with width equal to that of our 4 artboards *
+# ----------------------------------------------------
+#
+# screenContainer = new Layer 
+# 	width: screenWidth * 4
+# 	height: screenHeight
+# 	backgroundColor: "transparent"
+
+
+# ----------------------------------------------------
+# Draggable Demo
+# * Enable draggability on the x-dimension only *
+# ----------------------------------------------------
+#
+# screenContainer.draggable.enabled = true
+# screenContainer.draggable.speedY = 0
+
+
+# ----------------------------------------------------
+# Artboard Demo
+# * Only the first artboard is visible by default. Here we'll manually show the others *
+# ----------------------------------------------------
+# 
+# sketch.artboardB.visible = true
+# sketch.artboardC.visible = true
+# sketch.artboardD.visible = true
+
+
+# ----------------------------------------------------
+# Positioning Demo
+# * Artboards automatically import at (0,0). here we'll push them offscreen *
+# ----------------------------------------------------
+#
+# sketch.contentA.x = 0
+# sketch.artboardB.x = screenWidth
+# sketch.artboardC.x = screenWidth * 2
+# sketch.artboardD.x = screenWidth * 3
+
+
+# ----------------------------------------------------
+# Hierarchy Demo
+# * Layers can have superLayer and subLayers. Properties of parents transfer to children *
+# ----------------------------------------------------
+#
+# screens = [sketch.contentA, sketch.artboardB, sketch.artboardC, sketch.artboardD]
+# 
+# for screen in screens
+# 	screen.superLayer = screenContainer 
 	
-# We're defining a nice bouncy animation curve and switch to the first screen.
-screenContainer.states.animationOptions = curve: "spring(200,20,0)"
-screenContainer.states.switch "screen1"
 
-# Storing all of our artboards within an array
-screens = [sketch.contentA, sketch.artboardB, sketch.artboardC]
+# ----------------------------------------------------
+# Multiple States Demo
+# * We'll now add 4 states, one for each horizontal position of the walkthrough *
+# ----------------------------------------------------
+#
+# screenContainer.states.add 
+# 	screen1: {x:0}
+# 	screen2: {x:-screenWidth}
+# 	screen3: {x:-screenWidth*2}
+# 	screen4: {x:-screenWidth*3}
+#
+# screenContainer.states.animationOptions = curve: "spring(200,20,0)"
 
-# We're looping over our array and placing each artboard within our container
-for screen in screens
-	screen.superLayer = screenContainer 
-	
-# Grabbing the startPosition of each dragging instance
-screenContainer.on Events.DragStart, -> startPosition = this.x
 
-# When we release, we calculate our dragging distance and set the states accordingly.
-screenContainer.on Events.DragEnd, ->
-	distance = startPosition - this.x
-	startState = this.states.state
-	
-	# If we haven't dragged past 1/4th of our screenWidth, stay at screen1.
-	if Math.abs(distance) < (750/4) then this.states.switch startState
-	else 
-		# If we're dragging to the right and we're not at the last screen, go to next.
-		if distance > 0 and startState isnt "screen3" then this.states.next()
-		# If we're dragging to the left and we're not at the first screen, go to previous.
-		else if distance < 0 and startState isnt "screen1" then this.states.previous()
-		# Otherwise, stay at our current screen
-		else this.states.switch startState 
+# ----------------------------------------------------
+# Dragging Logic
+# * The last bit is logic to switch states back / forward depending on our drag *
+# ----------------------------------------------------
+#
+# screenContainer.on Events.DragStart, -> startPosition = this.x
+#
+# screenContainer.on Events.DragEnd, ->
+# 	distance = startPosition - this.x
+# 	startState = this.states.state
+# 	
+# 	# Do nothing if we haven't dragged far enough
+# 	if Math.abs(distance) < (screenWidth/4) then this.states.switch "screen1"
+# 	# Switch if we have dragged far enough
+# 	else 
+# 		# Move on to the right
+# 		if distance > 0 and startState isnt "screen4" then this.states.next()
+# 		# Move back to the left.
+# 		else if distance < 0 and startState isnt "screen1" then this.states.previous()
+# 		# Or stay here
+# 		else this.states.switch startState 
+
+# ----------------------------------------------------
+# Next Steps!
+# * Try blurring our dimming our background when we leave the first screen *
+# ----------------------------------------------------
+#
+# screenContainer.on Events.StateDidSwitch, ->
+# 	if screenContainer.states.state isnt "screen1"
+#		print "dim the background"
+# 	else
+#		print "undim the background"
+# 

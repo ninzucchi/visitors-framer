@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# 1425619539.596774
+# 1425653552.266654
 CACHE:
 /_server/server.js
 ../.DS_Store
@@ -108,19 +108,43 @@ CACHE:
 ../imported/framer-tutorial/images/Title-C250C0B2-65AB-47AB-98C2-42E2CFC36E00.png
 ../imported/framer-tutorial/layers.json
 ../imported/framer-tutorial/layers.json.js
-../imported/framer-tutorial-beta/images/Layer-background-A59C69E3-EACA-48A8-9E56-8973B96DE10A.png
+../imported/framer-tutorial-beta/images/Layer-background-01228127-C2BE-438F-A4D4-D2FFE7978112.png
+../imported/framer-tutorial-beta/images/Layer-background-413EBA8B-58B4-4354-9ED6-8F948470B6AE.png
+../imported/framer-tutorial-beta/images/Layer-background-5D11CBDE-1EFF-417F-A464-A190CD7F0F2B.png
+../imported/framer-tutorial-beta/images/Layer-background-D2AED8E1-BA7E-45A9-80B5-35058A270E7C.png
+../imported/framer-tutorial-beta/images/Layer-backgroundImage-A59C69E3-EACA-48A8-9E56-8973B96DE10A.png
 ../imported/framer-tutorial-beta/images/Layer-Choices-DA7BD3C3-D695-4775-9841-2040A053B3ED.png
-../imported/framer-tutorial-beta/images/Layer-contentC-D0549DF3-DE90-42ED-93DA-4F9AC49D75D3.png
+../imported/framer-tutorial-beta/images/Layer-Dot-139FBD7A-6941-4B0C-9614-C2B2A067C193.png
+../imported/framer-tutorial-beta/images/Layer-Dot-8261A1E1-231F-40DB-B27A-4E51BBA6188C.png
+../imported/framer-tutorial-beta/images/Layer-Dot-8B8AFF35-AD72-4630-9708-08826BF89018.png
+../imported/framer-tutorial-beta/images/Layer-Dot-BA8C593D-B0C2-40FA-8290-5CF1DE8EC959.png
+../imported/framer-tutorial-beta/images/Layer-Dot-C83615D9-587D-44F3-B5CB-09D2E009D350.png
+../imported/framer-tutorial-beta/images/Layer-Dot-D4F64F49-1CF7-4407-8DB8-1720AACC067C.png
+../imported/framer-tutorial-beta/images/Layer-Dot-DF052AE2-DAB3-4884-BCE7-97B2F088E3AC.png
 ../imported/framer-tutorial-beta/images/Layer-dot1-F4620355-8EDC-45A8-938C-F132DC181278.png
 ../imported/framer-tutorial-beta/images/Layer-dot2-A8B68C4E-6A1C-4FDF-A609-925954DBBF65.png
 ../imported/framer-tutorial-beta/images/Layer-dot3-62A01D50-FF15-499A-8163-D3F0782FD73C.png
 ../imported/framer-tutorial-beta/images/Layer-dot4-337CFB6A-C679-40C0-95DB-54C7849A0AA8.png
+../imported/framer-tutorial-beta/images/Layer-Femmes-D6938FA5-8608-43E1-B995-18161D875109.png
 ../imported/framer-tutorial-beta/images/Layer-Headshot-0C3084FC-88DE-4AFB-B46B-077D58B6C04B.png
+../imported/framer-tutorial-beta/images/Layer-Headshot-B0DBDA59-6FD5-4BB5-9EE8-569B8E66611F.png
 ../imported/framer-tutorial-beta/images/Layer-loginJoin-0A4E051F-3350-402F-8F7C-2C02BDDD9B3F.png
-../imported/framer-tutorial-beta/images/Layer-loginSignIn-4158F205-3F1F-468E-BCC7-A4E35E36C5D0.png
+../imported/framer-tutorial-beta/images/Layer-loginSign-4158F205-3F1F-468E-BCC7-A4E35E36C5D0.png
+../imported/framer-tutorial-beta/images/Layer-loginSignActive-0B9A9D17-7FEB-451D-9937-CB5E1001B92F.png
 ../imported/framer-tutorial-beta/images/Layer-logoIcon-8F5D7D1E-99B8-4EFB-A5A5-31B7316E1B15.png
 ../imported/framer-tutorial-beta/images/Layer-logoTitle-5BC263E1-DC75-4D2E-925A-4AEC421A0AB2.png
+../imported/framer-tutorial-beta/images/Layer-Map-8051E4AD-6EC1-405B-9F78-8B9926C31B8B.png
+../imported/framer-tutorial-beta/images/Layer-Map-FE2EF1FE-A1AC-4227-8A18-B5758B6EFE55.png
+../imported/framer-tutorial-beta/images/Layer-Radius-14E037CF-555C-4896-9AD5-1EEADD6D9BE8.png
+../imported/framer-tutorial-beta/images/Layer-Radius-214E2F61-FEAC-456D-ABFF-479DA49C831C.png
+../imported/framer-tutorial-beta/images/Layer-Radius-2FED27B3-E534-4DDA-A9AD-588A15F14072.png
+../imported/framer-tutorial-beta/images/Layer-Radius-367D2A3E-4DE5-4053-AFF3-251B23100956.png
+../imported/framer-tutorial-beta/images/Layer-Radius-57305A53-99B0-4460-9B71-64E665D4EA0C.png
+../imported/framer-tutorial-beta/images/Layer-Radius-980936A0-FF97-4BEE-90D0-F4EEFE66CFE4.png
+../imported/framer-tutorial-beta/images/Layer-Radius-CD20A0C6-368E-44BF-A605-E0738718B2C4.png
+../imported/framer-tutorial-beta/images/Layer-Text-B8FBB09C-639B-4972-8F6F-D3B780BDE8BD.png
 ../imported/framer-tutorial-beta/images/Layer-Text-C0B8C0ED-C635-44BE-BBCF-0E8B15C22102.png
+../imported/framer-tutorial-beta/images/Layer-Text-CE2219C3-DD22-4AB8-A7A4-A24701DEB6D8.png
 ../imported/framer-tutorial-beta/layers.json
 ../imported/framer-tutorial-beta/layers.json.js
 ../index.html
