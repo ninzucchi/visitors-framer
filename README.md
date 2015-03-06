@@ -109,24 +109,14 @@ All layers have certain default properties, namely width, height, position and b
 
 Layers are easy to position, too. Each layer has the following properties to help define its position: 
 
-``#Prints the layer’s left edge
-print sketch.logoIcon.x
+``print sketch.logoIcon.x
 print sketch.logoIcon.minX
-
-#Prints the layer’s right edge
 print sketch.logoIcon.maxX
-
-#Prints the layer’s horizontal center
 print sketch.logoIcon.midX
 
-#Prints the layer’s top edge
 print sketch.logoIcon.y
 print sketch.logoIcon.minY
-
-#Prints the layer’s bottom edge
 print sketch.logoIcon.maxY
-
-#Prints the layer’s vertical center
 print sketch.logoIcon.midY``
 
 # Animations
